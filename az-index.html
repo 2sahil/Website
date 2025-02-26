@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildfire Satellite Image Viewer</title>
+  <link rel="stylesheet" href="./az-index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 style="display: flex; justify-content: center;">Süni Peyklə Çəkilmiş Meşə Yanğınları<a class="en-index" href="./index.html">&#x1F1EC;&#x1F1E7;</a></h1>
+        <a class="aboutUs" href="./az-about.html">Haqqında</a>
+        
+  </header>
+
+  <div class="container">
+    <!-- Filter Section -->
+    <div class="filters">
+      <label for="sort-direction">Qeydə Alınma Tarixinə Görə:</label>
+      <select id="sort-direction">
+        <option value="ascending">Artan</option>
+        <option value="descending">Azalan</option>
+      </select>
+
+      <label for="filter-region">Region:</label>
+      <select id="filter-region">
+        <option value="all">Hamısı</option>
+      </select>
+
+      <label for="date-range">Tarix Aralığı:</label>
+      <input type="date" id="date-range-start" placeholder="Başlama Tarixi">
+      <input type="date" id="date-range-end" placeholder="Bitmə Tarixi">
+
+      <label for="filter-satellite">Peyk:</label>
+      <select id="filter-satellite">
+        <option value="all">Hamısı</option>
+      </select>
+
+      <label for="filter-instrument">Alət:</label>
+      <select id="filter-instrument">
+        <option value="all">Hamısı</option>
+      </select>
+
+      <a id="reset-filters" href="./az-index.html">Sıfırla</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="image-gallery" id="image-gallery"></div>
+      <div class="load-more-div">
+        <button id="loadMore">Daha Çox Yüklə</button>
+      </div>
+    </main>
+
+    <!-- Modal for Details and Map -->
+<div id="image-modal" class="modal">
+  <div class="modal-content">
+      <div class="modal-top">
+          <div class="modal-image-container" id="modal-image-container">
+              <img id="modal-image" src="path/to/image-a.jpg" alt="Image A" style="cursor: pointer;">
+          </div>
+          <div class="modal-map-container">
+              <iframe id="map-frame" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="modal-details" id="modal-info"></div>
+  </div>
+</div>
+
+<!-- Full-Screen Modal -->
+<div id="full-screen-modal" class="full-screen-modal" style="display: none;">
+  <span class="close-button" id="close-full-screen">&times;</span>
+  <img id="full-screen-image" src="" alt="Full-Screen Image">
+</div>
+
+  <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Meşə Yanğınları Peyk Görüntüləyicisi.</p>
+    <p>ADA Universiteti, Bakı, Azərbaycan.</p>
+  </footer>
+
+  <script src="az-index.js"></script>
+</body>
+
+</html>

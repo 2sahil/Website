@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>About Wildfire Satellite Image Viewer</h1>
+        <a class="aForDownload" href="./index.html">
+            Home
+        </a>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about-dataset">Dataset</a></li>
+            <li><a href="#about-team">Team</a></li>
+            <li><a href="#about-project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#terms">Terms and Services</a></li>
+        </ul>
+    </nav>
+
+
+        <!-- ADA Logo Section -->
+        <div class="adaLogoDiv">
+            <a href="https://www.ada.edu.az/en" target="_blank" rel="noopener">
+                <img class="adaLogo" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adalogonew.png" alt="ADA University Logo">            
+            </a>
+        </div>
+
+
+    <!-- About Dataset Section -->
+    <section id="about-dataset">
+        <h2>Dataset</h2>
+        <p>
+            The dataset contains wildfire images collected from satellite sources and includes metadata such as
+            acquisition dates, regions, satellite names, and instruments used. This dataset is essential for wildfire
+            analysis and research in Azerbaijan.
+        </p>
+        <p>
+            It can be downloaded as a .zip file that includes one folder with images and a CSV file containing
+            comprehensive metadata about the collected images.
+        </p>
+        <div class="divForDownload">
+            <a class="aForDownload" href="https://github.com/wildfireaze/wildfireaze.github.io/raw/refs/heads/main/WildfireDataset.zip?download=">
+                Download Dataset
+            </a>
+        </div>
+    </section>
+
+    <!-- About Team Section -->
+    <section id="about-team">
+        <h2>Team</h2>
+        <p>
+            This project was developed by ADA University students: Ahmad Huseynli, Turgay Farhadli, Gunel Aliyeva, and
+            Sahil Guluzada. Their dedication and teamwork ensured the creation of this innovative platform to improve
+            wildfire visualization and research capabilities in Azerbaijan.
+        </p>
+        <p>
+            The team specializes in software development, data visualization, and project management, contributing their
+            unique skills to deliver this impactful solution.
+        </p>
+    </section>
+
+    <!-- About Project Section -->
+    <section id="about-project">
+        <h2>Project</h2>
+        <p>
+            The Wildfire Satellite Image Viewer aims to address the lack of tools for wildfire visualization in
+            Azerbaijan. It provides users with the ability to filter wildfire images by region, time, satellite type,
+            and other criteria. The platform's interactive map and user-friendly design make it a valuable resource for
+            researchers, environmentalists, and policymakers.
+        </p>
+        <p>
+            The project combines satellite data analysis, modern web development techniques, and a focus on usability to
+            deliver a comprehensive solution for wildfire monitoring and data accessibility.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            For inquiries or collaborations, feel free to contact us:
+        </p>
+        <ul>
+            <li>Email: <a href="mailto:wildfireaze@ada.edu.az">wildfireaze@ada.edu.az</a></li>
+            <li>Phone: +994 50 123 45 67</li>
+            <li>Address: ADA University, Baku, Azerbaijan</li>
+        </ul>
+        <p>
+            Follow us on social media for updates and news:
+        </p>
+        <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </section>
+
+    <!-- Terms and Services Section -->
+    <section id="terms">
+        <h2>Terms and Services</h2>
+        <p>
+            By accessing and using this website, you agree to the following terms:
+        </p>
+        <ul>
+            <li>The dataset provided on this platform is for educational and research purposes only.</li>
+            <li>
+                Proper attribution is required when using the dataset for any publications or projects. Please cite the
+                authors and ADA University as the source.
+            </li>
+            <li>
+                We do not guarantee the accuracy or completeness of the data and shall not be held liable for any
+                damages resulting from its use.
+            </li>
+        </ul>
+    </section>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Wildfire Satellite Image Viewer.</p>
+        <p>ADA University, Baku, Azerbaijan.</p>
+    </footer>
+
+    <script src="about.js"></script>
+
+   <!-- Download Confirmation Modal -->
+<div id="downloadModal" class="modal">
+    <div class="modal-content">
+        <h2>Download Dataset</h2>
+        <p>Do you agree with the <a id="termsLink" class="aForDownload" href="#terms">Terms and Conditions</a>?</p>
+        <label>
+            <input type="checkbox" id="agreeCheckbox"> I agree to the terms and conditions.
+        </label>
+        <br>
+        <button id="confirmDownload" class="aForDownload" disabled>Confirm & Download</button>
+        <button id="closeModal" class="aForDownload">Cancel</button>
+    </div>
+</div>
+    
+</body>
+
+</html>

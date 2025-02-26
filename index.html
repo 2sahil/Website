@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildfire Satellite Image Viewer</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 style="display: flex; justify-content: center;">Wildfire Satellite Image Viewer<a class="az-index" href="./az-index.html">&#x1F1E6;&#x1F1FF;</a></h1>
+    <a class="aboutUs" href="./about.html">About</a>
+    
+  </header>
+
+  <div class="container">
+    <!-- Filter Section -->
+    <div class="filters">
+      <label for="sort-direction">Sort by Acquisition Date:</label>
+      <select id="sort-direction">
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+
+      <label for="filter-region">Region:</label>
+      <select id="filter-region">
+        <option value="all">All</option>
+      </select>
+
+      <label for="date-range">Date Range:</label>
+      <input type="date" id="date-range-start" placeholder="Start Date">
+      <input type="date" id="date-range-end" placeholder="End Date">
+
+      <label for="filter-satellite">Satellite:</label>
+      <select id="filter-satellite">
+        <option value="all">All</option>
+      </select>
+
+      <label for="filter-instrument">Instrument:</label>
+      <select id="filter-instrument">
+        <option value="all">All</option>
+      </select>
+
+      <a id="reset-filters" href="./index.html">Reset</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="image-gallery" id="image-gallery"></div>
+      <div class="load-more-div">
+        <button id="loadMore">Load More</button>
+      </div>
+    </main>
+
+
+    <!-- Modal for Details and Map -->
+<div id="image-modal" class="modal">
+  <div class="modal-content">
+      <div class="modal-top">
+          <div class="modal-image-container" id="modal-image-container">
+              <img id="modal-image" src="path/to/image-a.jpg" alt="Image A" style="cursor: pointer;">
+          </div>
+          <div class="modal-map-container">
+              <iframe id="map-frame" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="modal-details" id="modal-info"></div>
+  </div>
+</div>
+
+<!-- Full-Screen Modal -->
+<div id="full-screen-modal" class="full-screen-modal" style="display: none;">
+  <span class="close-button" id="close-full-screen">&times;</span>
+  <img id="full-screen-image" src="" alt="Full-Screen Image">
+</div>
+  
+
+
+  <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Wildfire Satellite Image Viewer.</p>
+    <p>ADA University, Baku, Azerbaijan.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
